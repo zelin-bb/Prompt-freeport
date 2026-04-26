@@ -1,0 +1,220 @@
+{
+  "generatedAt": "2026-04-26",
+  "counts": {
+    "image": 527,
+    "video": 720,
+    "total": 1247,
+    "noMedia": 0,
+    "peterImages": 500,
+    "evoImages": 69,
+    "youmindVideos": 200,
+    "commonsVideos": 520,
+    "exactDuplicatesRemoved": 42
+  },
+  "policy": "本次生成只保留有真实图片或真实视频+封面的案例；不再生成无媒体提示词模板。视频卡片使用真实封面图预览，点击放大时才加载视频本体。",
+  "deduplication": {
+    "method": "exact media URL dedupe after source-level one-image-per-prompt selection",
+    "removed": [
+      {
+        "id": "peter-gpt-image-2-prompt_20260424_089",
+        "duplicateOf": "image:https://pbs.twimg.com/media/HGgUkE8XgAAAwjV.jpg"
+      },
+      {
+        "id": "peter-gpt-image-2-prompt_20260424_140",
+        "duplicateOf": "image:https://pbs.twimg.com/media/HGhpmJxaYAAGS4d.jpg"
+      },
+      {
+        "id": "peter-gpt-image-2-prompt_20260424_142",
+        "duplicateOf": "image:https://pbs.twimg.com/media/HGgcw-va4AALcbY.jpg"
+      },
+      {
+        "id": "peter-gpt-image-2-prompt_20260424_152",
+        "duplicateOf": "image:https://pbs.twimg.com/media/HGhqpxcb0AAuk4H.jpg"
+      },
+      {
+        "id": "peter-gpt-image-2-prompt_20260424_158",
+        "duplicateOf": "image:https://pbs.twimg.com/media/HGdqRaxWYAAOVtb.jpg"
+      },
+      {
+        "id": "peter-gpt-image-2-prompt_20260424_164",
+        "duplicateOf": "image:https://pbs.twimg.com/media/HGhuzLQW4AArkzd.jpg"
+      },
+      {
+        "id": "peter-gpt-image-2-prompt_20260424_126",
+        "duplicateOf": "image:https://pbs.twimg.com/media/HGjXn4tboAAAadk.jpg"
+      },
+      {
+        "id": "peter-gpt-image-2-prompt_20260424_129",
+        "duplicateOf": "image:https://pbs.twimg.com/media/HGkGivKXUAAhkTK.jpg"
+      },
+      {
+        "id": "peter-gpt-image-2-prompt_20260424_133",
+        "duplicateOf": "image:https://pbs.twimg.com/media/HGgEVKiboAEK1YZ.jpg"
+      },
+      {
+        "id": "peter-gpt-image-2-prompt_20260424_143",
+        "duplicateOf": "image:https://pbs.twimg.com/media/HGgMFHfXQAAw8Bb.jpg"
+      },
+      {
+        "id": "peter-gpt-image-2-prompt_20260424_153",
+        "duplicateOf": "image:https://pbs.twimg.com/media/HGgNKz3bcAERs5C.jpg"
+      },
+      {
+        "id": "peter-gpt-image-2-prompt_20260424_162",
+        "duplicateOf": "image:https://pbs.twimg.com/media/HGfsj3AbEAAgm2b.jpg"
+      },
+      {
+        "id": "peter-gpt-image-2-prompt_20260424_122",
+        "duplicateOf": "image:https://pbs.twimg.com/media/HGj_-PEb0AAfH9E.jpg"
+      },
+      {
+        "id": "peter-gpt-image-2-prompt_20260424_127",
+        "duplicateOf": "image:https://pbs.twimg.com/media/HGkkpC9aQAAV8Vp.jpg"
+      },
+      {
+        "id": "peter-gpt-image-2-prompt_20260424_136",
+        "duplicateOf": "image:https://pbs.twimg.com/media/HGfyp0obkAEtjXX.jpg"
+      },
+      {
+        "id": "peter-gpt-image-2-prompt_20260424_099",
+        "duplicateOf": "image:https://pbs.twimg.com/media/HGkHCe5bgAA1EBU.jpg"
+      },
+      {
+        "id": "peter-gpt-image-2-prompt_20260424_137",
+        "duplicateOf": "image:https://pbs.twimg.com/media/HGgwoDGbEAAYA2_.jpg"
+      },
+      {
+        "id": "peter-gpt-image-2-prompt_20260424_112",
+        "duplicateOf": "image:https://pbs.twimg.com/media/HGkQdflXMAAvMOh.jpg"
+      },
+      {
+        "id": "peter-gpt-image-2-prompt_20260424_113",
+        "duplicateOf": "image:https://pbs.twimg.com/media/HGj2x9ybMAAXxdS.jpg"
+      },
+      {
+        "id": "peter-gpt-image-2-prompt_20260424_116",
+        "duplicateOf": "image:https://pbs.twimg.com/media/HGjXMmTWgAAFxpe.jpg"
+      },
+      {
+        "id": "peter-gpt-image-2-prompt_20260424_156",
+        "duplicateOf": "image:https://pbs.twimg.com/media/HGf3EceaAAAIzXZ.jpg"
+      },
+      {
+        "id": "peter-gpt-image-2-prompt_20260424_163",
+        "duplicateOf": "image:https://pbs.twimg.com/media/HGhbAjyaAAA-ceW.jpg"
+      },
+      {
+        "id": "peter-gpt-image-2-prompt_20260424_124",
+        "duplicateOf": "image:https://pbs.twimg.com/media/HGk2QBPasAAgyQj.jpg"
+      },
+      {
+        "id": "peter-gpt-image-2-prompt_20260424_167",
+        "duplicateOf": "image:https://pbs.twimg.com/media/HGgH3xRakAEH91T.jpg"
+      },
+      {
+        "id": "peter-gpt-image-2-prompt_20260424_128",
+        "duplicateOf": "image:https://pbs.twimg.com/media/HGkNcbfawAAGYrB.jpg"
+      },
+      {
+        "id": "peter-gpt-image-2-prompt_20260424_169",
+        "duplicateOf": "image:https://pbs.twimg.com/media/HGg1l6QaIAAjNGA.jpg"
+      },
+      {
+        "id": "peter-gpt-image-2-prompt_20260424_165",
+        "duplicateOf": "image:https://pbs.twimg.com/media/HGgFPWjWQAAnIHp.jpg"
+      },
+      {
+        "id": "peter-gpt-image-2-prompt_20260424_098",
+        "duplicateOf": "image:https://pbs.twimg.com/media/HGj5LGGagAAKVoz.jpg"
+      },
+      {
+        "id": "peter-gpt-image-2-prompt_20260424_101",
+        "duplicateOf": "image:https://pbs.twimg.com/media/HGkfXAKWwAANFvB.jpg"
+      },
+      {
+        "id": "peter-gpt-image-2-prompt_20260424_103",
+        "duplicateOf": "image:https://pbs.twimg.com/media/HGjNSBlXUAE6cN5.jpg"
+      },
+      {
+        "id": "peter-gpt-image-2-prompt_20260424_105",
+        "duplicateOf": "image:https://pbs.twimg.com/media/HGkF63EboAASLFX.jpg"
+      },
+      {
+        "id": "peter-gpt-image-2-prompt_20260424_148",
+        "duplicateOf": "image:https://pbs.twimg.com/media/HGgvbx4acAA1tH9.jpg"
+      },
+      {
+        "id": "peter-gpt-image-2-prompt_20260424_115",
+        "duplicateOf": "image:https://pbs.twimg.com/media/HGkgChlb0AAyGas.jpg"
+      },
+      {
+        "id": "peter-gpt-image-2-prompt_20260424_157",
+        "duplicateOf": "image:https://pbs.twimg.com/media/HGiKx2FawAAwD-e.jpg"
+      },
+      {
+        "id": "peter-gpt-image-2-prompt_20260424_131",
+        "duplicateOf": "image:https://pbs.twimg.com/media/HGgjv42aEAAloyT.jpg"
+      },
+      {
+        "id": "peter-gpt-image-2-prompt_20260424_149",
+        "duplicateOf": "image:https://pbs.twimg.com/media/HGgx1QPXAAAEj5U.jpg"
+      },
+      {
+        "id": "peter-gpt-image-2-prompt_20260424_150",
+        "duplicateOf": "image:https://pbs.twimg.com/media/HGhU6wbboAAHC4C.jpg"
+      },
+      {
+        "id": "peter-gpt-image-2-prompt_20260424_114",
+        "duplicateOf": "image:https://pbs.twimg.com/media/HGj-bkuakAAp6t3.jpg"
+      },
+      {
+        "id": "peter-gpt-image-2-prompt_20260424_154",
+        "duplicateOf": "image:https://pbs.twimg.com/media/HGf3yvObEAA_ILQ.jpg"
+      },
+      {
+        "id": "peter-gpt-image-2-prompt_20260424_123",
+        "duplicateOf": "image:https://pbs.twimg.com/media/HGjDb9YXIAAdGZD.jpg"
+      },
+      {
+        "id": "evo-gpt-image-2-2046115431144902732",
+        "duplicateOf": "image:https://pbs.twimg.com/media/HGVC87TaIAAYLc8.jpg"
+      },
+      {
+        "id": "evo-gpt-image-2-2046518189509734903",
+        "duplicateOf": "image:https://pbs.twimg.com/media/HGaxLqdbkAAToA_.jpg"
+      }
+    ]
+  },
+  "reviewedSources": [
+    {
+      "name": "peterRooo/awesome-gpt-image-2-prompts",
+      "url": "https://github.com/peterRooo/awesome-gpt-image-2-prompts",
+      "observedLicense": "公开 GPT Image 2 提示词与预览图数据集",
+      "commercialAssessment": "作为真实案例展示；商用前需逐条核查作者和平台授权。"
+    },
+    {
+      "name": "EvoLinkAI/awesome-gpt-image-2-prompts",
+      "url": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "observedLicense": "社区提示词与社媒预览图合集",
+      "commercialAssessment": "作为真实案例展示；商用前需逐条核查作者和平台授权。"
+    },
+    {
+      "name": "YouMind-OpenLab/awesome-seedance-2-prompts",
+      "url": "https://github.com/YouMind-OpenLab/awesome-seedance-2-prompts",
+      "observedLicense": "公开视频生成提示词案例仓库",
+      "commercialAssessment": "作为真实视频案例展示；商用前需核查作者授权、声音、音乐、肖像和第三方素材。"
+    },
+    {
+      "name": "YouMind-OpenLab/awesome-grok-imagine-prompts",
+      "url": "https://github.com/YouMind-OpenLab/awesome-grok-imagine-prompts",
+      "observedLicense": "公开视频生成提示词案例仓库",
+      "commercialAssessment": "作为真实视频案例展示；商用前需核查作者授权、声音、音乐、肖像和第三方素材。"
+    },
+    {
+      "name": "Wikimedia Commons",
+      "url": "https://commons.wikimedia.org/",
+      "observedLicense": "每条媒体文件携带独立许可元数据",
+      "commercialAssessment": "用于补齐真实可播放视频案例；使用前需按单条页面核查许可、署名和第三方权利。"
+    }
+  ]
+}

@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Prompt Freeport - 免费 AI 提示词图库</title>
+    <meta
+      name="description"
+      content="免费 GPT Image 2 与 Sora 2.0 图片、视频提示词图库。"
+    />
+    <link rel="icon" href="./assets/brand-icon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#" aria-label="Prompt Freeport 首页">
+        <img class="brand-icon" src="./assets/brand-icon.svg" alt="" aria-hidden="true" />
+        <span>Prompt Freeport</span>
+      </a>
+      <nav class="nav-links" aria-label="主导航">
+        <a href="#gallery">提示词库</a>
+        <a href="#gallery">AI 生图</a>
+        <a href="#gallery">AI 生视频</a>
+        <a href="#submit">投稿</a>
+      </nav>
+    </header>
+
+    <main class="page">
+      <section class="hero" aria-labelledby="page-title">
+        <div>
+          <p class="kicker">免费提示词分享站 MVP</p>
+          <h1 id="page-title">AI 图片与视频提示词图库</h1>
+          <p class="hero-copy">
+            浏览带真实图片或视频预览的提示词案例。提示词默认隐藏，可以点开查看并复制。
+          </p>
+        </div>
+        <div class="hero-count">
+          <strong id="caseCount">0</strong>
+          <span>个提示词</span>
+          <small id="caseBreakdown">图片 0 · 视频 0</small>
+        </div>
+      </section>
+
+      <section class="toolbar" aria-label="搜索和筛选">
+        <label class="search-box">
+          <i data-lucide="search"></i>
+          <input id="searchInput" type="search" placeholder="搜索案例、模型或标签" autocomplete="off" />
+        </label>
+        <div class="tabs" role="group" aria-label="媒体类型">
+          <button class="tab is-active" data-filter="all" type="button">全部</button>
+          <button class="tab" data-filter="image" type="button">图片</button>
+          <button class="tab" data-filter="video" type="button">视频</button>
+        </div>
+      </section>
+
+      <section class="tag-row" aria-label="热门标签">
+        <button class="tag-filter is-active" data-tag="all" type="button">全部标签</button>
+        <button class="tag-filter" data-tag="海报" type="button">海报</button>
+        <button class="tag-filter" data-tag="真实摄影" type="button">真实摄影</button>
+        <button class="tag-filter" data-tag="UI" type="button">UI</button>
+        <button class="tag-filter" data-tag="角色" type="button">角色</button>
+        <button class="tag-filter" data-tag="旅行" type="button">旅行</button>
+        <button class="tag-filter" data-tag="产品" type="button">产品</button>
+        <button class="tag-filter" data-tag="电商" type="button">电商</button>
+        <button class="tag-filter" data-tag="科幻" type="button">科幻</button>
+        <button class="tag-filter" data-tag="食物" type="button">食物</button>
+        <button class="tag-filter" data-tag="游戏" type="button">游戏</button>
+        <button class="tag-filter" data-tag="建筑" type="button">建筑</button>
+        <button class="tag-filter" data-tag="分镜" type="button">分镜</button>
+        <button class="tag-filter" data-tag="广告" type="button">广告</button>
+        <button class="tag-filter" data-tag="MV" type="button">MV</button>
+        <button class="tag-filter" data-tag="FPV" type="button">FPV</button>
+      </section>
+
+      <section class="gallery-wrap" id="gallery" aria-labelledby="gallery-title">
+        <div class="section-head">
+          <h2 id="gallery-title">案例</h2>
+          <span class="section-note">点击媒体放大预览，点击按钮查看或复制提示词</span>
+        </div>
+        <div id="galleryGrid" class="gallery-grid"></div>
+        <div class="load-more-wrap">
+          <button class="soft-button load-more" id="loadMoreButton" type="button" hidden>
+            <i data-lucide="chevrons-down"></i>
+            加载更多
+          </button>
+        </div>
+        <div id="emptyState" class="empty-state" hidden>
+          <i data-lucide="search-x"></i>
+          <p>没有匹配的案例</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="resources">
+      <section class="submit-strip" id="submit">
+        <div>
+          <strong>投稿模板</strong>
+          <span>标题、模型、媒体类型、预览图、提示词、来源文字、投稿人。</span>
+        </div>
+        <button class="soft-button" id="copySubmitTemplate" type="button">
+          <i data-lucide="clipboard-plus"></i>
+          复制模板
+        </button>
+      </section>
+      <p id="resourceList" class="reference-copy"></p>
+    </footer>
+
+    <div class="toast" id="toast" role="status" aria-live="polite">已复制</div>
+    <div class="prompt-modal" id="promptModal" hidden>
+      <div class="modal-backdrop" data-close-modal></div>
+      <section class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <header class="modal-head">
+          <div>
+            <p id="modalMeta" class="modal-meta"></p>
+            <h2 id="modalTitle">提示词</h2>
+          </div>
+          <button class="modal-close" type="button" data-close-modal aria-label="关闭提示词">
+            <i data-lucide="x"></i>
+          </button>
+        </header>
+        <div class="modal-copy-row">
+          <button class="copy-button" type="button" id="modalCopyPrompt">
+            <i data-lucide="copy"></i>
+            复制提示词
+          </button>
+        </div>
+        <article class="prompt-block prompt-single">
+          <pre id="modalPrompt"></pre>
+        </article>
+      </section>
+    </div>
+    <div class="media-modal" id="mediaModal" hidden>
+      <div class="media-backdrop" data-close-media></div>
+      <section class="media-panel" role="dialog" aria-modal="true" aria-labelledby="mediaTitle">
+        <header class="media-head">
+          <div>
+            <p id="mediaMeta" class="modal-meta"></p>
+            <h2 id="mediaTitle">媒体预览</h2>
+          </div>
+          <button class="modal-close" type="button" data-close-media aria-label="关闭媒体预览">
+            <i data-lucide="x"></i>
+          </button>
+        </header>
+        <div class="media-viewer" id="mediaViewer"></div>
+      </section>
+    </div>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script src="./data/generated-cases.js"></script>
+    <script src="./data/quality-blocklist.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
