@@ -822,6 +822,7 @@ const mediaModal = document.querySelector("#mediaModal");
 const mediaTitle = document.querySelector("#mediaTitle");
 const mediaMeta = document.querySelector("#mediaMeta");
 const mediaViewer = document.querySelector("#mediaViewer");
+const wechatFollow = document.querySelector(".wechat-follow");
 let activeModalItem = null;
 const VIEW_STORAGE_KEY = "prompt-freeport-view-counts-v1";
 let viewCounts = loadViewCounts();
@@ -1237,6 +1238,52 @@ function refreshIcons() {
   }
 }
 
+function setupWechatFollow() {
+  if (!wechatFollow) return;
+
+  const setOpen = (isOpen) => {
+    wechatFollow.classList.toggle("is-open", isOpen);
+    wechatFollow.setAttribute("aria-expanded", String(isOpen));
+  };
+
+  const closeOnScroll = () => {
+    if (!wechatFollow.classList.contains("is-open")) return;
+    setOpen(false);
+    wechatFollow.blur();
+  };
+
+  const showInitialPrompt = () => {
+    requestAnimationFrame(() => setOpen(true));
+  };
+
+  wechatFollow.addEventListener("click", (event) => {
+    event.stopPropagation();
+    setOpen(!wechatFollow.classList.contains("is-open"));
+  });
+
+  document.addEventListener("click", (event) => {
+    if (!wechatFollow.contains(event.target)) {
+      setOpen(false);
+    }
+  });
+
+  window.addEventListener("wheel", closeOnScroll, { passive: true });
+  window.addEventListener("scroll", closeOnScroll, { passive: true });
+  window.addEventListener("touchmove", closeOnScroll, { passive: true });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      closeOnScroll();
+    }
+  });
+
+  if (document.readyState === "complete") {
+    showInitialPrompt();
+  } else {
+    window.addEventListener("load", showInitialPrompt, { once: true });
+  }
+}
+
 document.querySelectorAll(".tab").forEach((button) => {
   button.addEventListener("click", () => {
     state.filter = button.dataset.filter;
@@ -1393,3 +1440,4 @@ document.addEventListener("keydown", (event) => {
 renderResources();
 renderCases();
 refreshIcons();
+setupWechatFollow();
